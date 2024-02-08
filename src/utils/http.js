@@ -42,7 +42,11 @@ export async function getAllRegistee({signal,searchTerm}){
   }
   
   const res = await fetch(url,{
-    signal:signal
+    signal:signal,
+    credentials :'include',
+       headers: {
+        'Content-type':'application/json'
+      },
   });
 
   if (!res.ok) {
@@ -137,7 +141,34 @@ export async function updateUsername(post){
 export async function getMeData({signal}){
   const url = 'http://localhost:8090/api/v1/user-detail';
   const res = await fetch(url,{
-     signal:signal
+     signal:signal,
+     credentials :'include',
+     headers: {
+      'Content-type':'application/json'
+    },
+  });
+
+  if (!res.ok) {
+    const error = new Error('An error occurred while fetching the events');
+    error.code = res.status;
+    error.info = await res.json();
+    console.log(error.info);
+    
+    throw error
+  }
+  const {data} = await res.json();
+ console.log(data);
+ 
+  return data;
+}
+export async function logoutUser({signal}){
+  const url = 'http://localhost:8090/api/v1/logout';
+  const res = await fetch(url,{
+     signal:signal,
+     credentials :'include',
+     headers: {
+      'Content-type':'application/json'
+    },
   });
 
   if (!res.ok) {
@@ -179,5 +210,31 @@ export async function uploadUserPhoto(post){
   console.log(data);
 
 return data;
+}
+
+export async function updateUserDetails(post){
+  const url = 'http://localhost:8090/api/v1/update-my-detail';
+  const res = await fetch(url,{
+     method:"PATCH",
+     body: JSON.stringify(post),
+     credentials :'include',
+     headers: {
+      'Content-type':'application/json'
+    },
+
+  });
+
+  if (!res.ok) {
+    const error = new Error('An error occurred while fetching the events');
+    error.code = res.status;
+    error.info = await res.json();
+    console.log(error.info);
+    
+    throw error
+  }
+  const {data} = await res.json();
+  console.log(data);
+ 
+  return data;
 }
 
