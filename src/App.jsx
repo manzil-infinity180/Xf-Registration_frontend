@@ -11,6 +11,7 @@ import { AddressForm } from "./components/RegisterDemo";
 import {GetMe} from "./auth/GetMe"
 import { UsernameUpdate } from "./auth/UsernameUpdate";
 import { UploadImages } from "./components/UploadImages";
+import OtherDetails from "./components/OtherDetails";
 const router = createBrowserRouter([
   {
     path:'/login',
@@ -42,6 +43,10 @@ const router = createBrowserRouter([
   {
     path:'/upload-img',
     element : <UploadImages />
+  },
+  {
+    path:'/profile/:username',
+    element : <OtherDetails />
   },
   {
     path:'*',

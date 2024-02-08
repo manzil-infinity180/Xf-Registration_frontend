@@ -31,7 +31,8 @@ export function UploadImages() {
         // console.log(file)
         const data = new FormData();
         console.log(file)
-        data.append("image", file);
+        data.append("photo", file);
+       
        
         
         // const datax = Object.fromEntries(data);
@@ -49,9 +50,10 @@ export function UploadImages() {
     
     function handleBgFile(){
         const data = new FormData();
-        data.append("image", filebg);
-        const datax = Object.fromEntries(data);
-        console.log(datax);
+        data.append("bgimg", filebg);
+        // const datax = Object.fromEntries(data);
+        console.log(data);
+        mutate(data);
         
        
     }

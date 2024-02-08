@@ -161,6 +161,29 @@ export async function getMeData({signal}){
  
   return data;
 }
+export async function getOthersData({signal,username}){
+  // const 
+  const url = 'http://localhost:8090/api/v1/search/'+username;
+  const res = await fetch(url,{
+     signal:signal,
+     credentials :'include',
+     headers: {
+      'Content-type':'application/json'
+    },
+  });
+
+  if (!res.ok) {
+    const error = new Error('An error occurred while fetching the events');
+    error.code = res.status;
+    error.info = await res.json();
+    console.log(error.info);
+    
+    throw error
+  }
+  const {data} = await res.json();
+ 
+  return data;
+}
 export async function logoutUser({signal}){
   const url = 'http://localhost:8090/api/v1/logout';
   const res = await fetch(url,{
@@ -187,13 +210,19 @@ export async function logoutUser({signal}){
 
 // under construction 
 export async function uploadUserPhoto(post){
-  console.log(post);
+  console.log("post");
+  const category = Object.fromEntries(post);
+  let url = "http://localhost:8090/api/v1/upload-userphoto";
+
+  if(category.bgimg){
+    url = "http://localhost:8090/api/v1/upload-bgimg";
+  }
   
-  const url = "http://localhost:8090/api/v1/upload-userphoto";
+   
   const res = await fetch(url,{
     method:"PATCH",
     body:post,
-    headers: { 'Content-Type': 'application/json' },
+    // headers: { 'Content-Type': 'multipart/form-data;' },
     credentials :'include',
  });
   if (!res.ok) {
