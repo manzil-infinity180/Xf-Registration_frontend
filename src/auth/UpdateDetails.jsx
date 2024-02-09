@@ -68,7 +68,6 @@ export function UpdateDetails() {
       }
     return (
          <div>
-
             {data && <div style={{
         height:"100%",
         width: "100%",
@@ -146,6 +145,28 @@ export function UpdateDetails() {
             value={user.OneTopSkill}
             onChange={handleInput}
             />
+
+            { user &&
+            user.github && 
+            <>
+            <p style={{textAlign:"center"}}>Social Links</p>
+            <input type="text" placeholder="Github Link" style={style} name="github"
+            value={user.github} onChange={handleInput}/>
+
+            <input type="text" placeholder="LinkedIn Link" 
+            style={style} 
+            name="linkedin"
+            value={user.linkedin}
+            onChange={handleInput}
+            />
+            <input type="text" placeholder="Leetcode Link" 
+            style={style} 
+            name="leetcode"
+            value={user.leetcode}
+            onChange={handleInput}/>
+            </>
+            
+            }
             <button type="submit" style={style}>Update</button>
         </form>
         </div>}

@@ -118,17 +118,22 @@ export function Register(){
             <label>Username</label>
             <input type="text" name="username" onChange={handleInput}/> */}
             <h2 style={{textAlign:"center"}}>Register YourSelf</h2>
-            <input type="text" placeholder="Full Name" name="name" style={style}/>
-            <input type="email" placeholder="Email" name="email" style={style}/>
-            <input type="number" placeholder="age" name="age" style={style}/>
-            <input type="text" placeholder="Username"  name="username" style={style}/>
-            <input type="text" placeholder="College Name" name="college"style={style} />
-            <input type="text" placeholder="Address" name="address" style={style}/>
-            <input type="text" placeholder="PostalCode" name="PostalCode" style={style}/>
-            <input type="text" placeholder="Position-Student/Current Job" name="position" style={style}/>
-            <input type="text" placeholder="One Top Skill" name="OneTopSkill" style={style}/>
-            
+            <input type="text" placeholder="Full Name *" name="name" style={style} required/>
+            <input type="email" placeholder="Email *" name="email" style={style} required />
+            <input type="number" placeholder="age *" name="age" style={style} required />
+            <input type="text" placeholder="Username *"  name="username" style={style} required />
+            <input type="text" placeholder="College Name *" name="college"style={style} required/>
+            <input type="text" placeholder="Address *" name="address" style={style} required/>
+            <input type="text" placeholder="PostalCode *" name="PostalCode" style={style} required/>
+            <input type="text" placeholder="Position-Student/Current Job *" name="position" style={style} required/>
+            <input type="text" placeholder="One Top Skill *" name="OneTopSkill" style={style} required/>
+            <input type="text" placeholder="Skills* separated by commas like nodejs,react " style={style} name="skills"/>
+            <p style={{textAlign:"center"}}>Social Links</p>
+            <input type="text" placeholder="Github Link" style={style} name="github"/>
+            <input type="text" placeholder="LinkedIn Link" style={style} name="linkedin"/>
+            <input type="text" placeholder="Leetcode Link" style={style} name="leetcode"/>
 
+            
            
             {/* <label>Search</label>
             <input type="text" value={searchTerm} onChange={(e)=>setSearchTerm(e.target.value)}

@@ -7,6 +7,7 @@ import { ErrorPreview } from '../components/ErrorPreview';
 import { Registee } from '../components/Registee';
 import { Logout } from './Logout';
 import { UpdateDetails } from './UpdateDetails';
+import { BackButton } from '../components/BackButton';
 
 export function GetMe() {
     const {data,isError,error,isPending,isLoading}=useQuery({
@@ -35,6 +36,7 @@ export function GetMe() {
     
     return (
         <div>
+            <BackButton />
             <div>
             <h1>Profile</h1>
             {

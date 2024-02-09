@@ -6,7 +6,7 @@ import {queryclient} from "../utils/http"
 import {useNavigate} from "react-router-dom"
 import { Loader } from "../components/Loader";
 import { Registee } from "../components/Registee";
-
+import {BackButton} from "../components/BackButton";
 export function Login(){
     const navigate = useNavigate();
     // const [post , setPost]= useState({
@@ -100,6 +100,8 @@ export function Login(){
     
 
     return(
+        <>
+        <BackButton />
         <form onSubmit={handleSubmit}>
             <label>Email</label>
             <input type="email" name="email" onChange={handleInput}/>
@@ -109,5 +111,6 @@ export function Login(){
             {content}
             <button type="submit" style={{fontSize:"1.1rem"}}>Login</button>
         </form>
+        </>
     )
 }
