@@ -1,0 +1,128 @@
+.content_secton {
+    width: 100%;
+    margin-inline:auto;
+    padding-inline:.5rem
+}
+
+.section_content2_main {
+    margin-top: 2rem
+}
+
+@media (min-width: 475px) {
+    .content_secton {
+        max-width:475px
+    }
+}
+
+@media (min-width: 640px) {
+    .content_secton {
+        max-width:640px
+    }
+}
+
+@media (min-width: 769px) {
+    .content_secton {
+        max-width:769px
+    }
+}
+
+@media (min-width: 1025px) {
+    .content_secton {
+        max-width:1025px
+    }
+
+    .section_content2_main {
+        margin-top: 1rem
+        
+    }
+}
+
+@media (min-width: 1281px) {
+    .content_secton {
+        max-width:1281px;
+    }
+}
+.inside_img_main{
+    display: flex;
+    justify-content: center;
+    
+    align-items: center;
+    min-height: 200px;
+    padding: 0;
+    position: relative !important;
+    color: white;
+    /* background-color: #091023fc !important; */
+    /* border: pink; */
+    /* background-size:100%;
+    background-position: 10%;
+    background-image: url('https://images.rawpixel.com/image_800/czNmcy1wcml2YXRlL3Jhd3BpeGVsX2ltYWdlcy93ZWJzaXRlX2NvbnRlbnQvbHIvcm0zMDktYWV3LTAxM18xXzEuanBn.jpg'); */
+}
+.title_h1_main{
+    font-size: 2.5rem;
+    text-transform: uppercase;
+    /* line-height: 1.5; */
+    letter-spacing: 0.09ch;
+    /* co */
+}
+.title_des_main{
+    text-align: center;
+    max-width: 80ch;
+    margin: 1rem auto;
+    color: #7f8ea3;
+    font-size: 1.12rem;
+    /* white-space: wrap; */
+}
+.social_icon_link{
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    margin: 1.2rem 0;
+}
+.line_div{
+    width: 50%;
+    padding: 1px;
+    background: aliceblue;
+    /* display: flex; */
+    /* text-align: center; */
+    margin: 3rem auto;
+    /* justify-content: center; */
+}
+.resume_div{
+    display: flex;
+    justify-content: center;
+    text-align: center;
+}
+.resume_download{
+    text-align:center;
+            border:1px solid pink;
+            background-color:transparent;
+            width:20%;
+            padding:10px;
+            border-radius:16px;
+            font-size:1.2rem;
+            cursor: pointer;
+}
+.resume_download:hover{
+    border: none;
+}
+.badge_skill{
+    margin:10px;
+    /* display: flex; */
+    /* text-align: center; */
+    /* justify-content: center; */
+    /* max-width: 50ch; */
+
+}
+.heatmap_div,.leetcode_div{
+    display: flex;
+    justify-content: center;
+    margin: 2rem 0;
+}
+.div_content_main{
+    margin-top: 20rem;
+    
+}
+/*
+key: d1133f420b6f8e139be6f87450a547b13541762c 
+secret: 04dabf44cbfd605c37a5c532e0667cdabbda57c0 
+*/

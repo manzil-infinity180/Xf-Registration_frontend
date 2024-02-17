@@ -1,9 +1,9 @@
 import {QueryClientProvider} from "@tanstack/react-query";
 import {queryclient} from "./utils/http";
 import {createBrowserRouter,RouterProvider} from "react-router-dom"
-import {Login} from "./auth/Login";
+import Login from "./components/LoginPage/LoginPage";
 import { ReactQueryDevtools } from '@tanstack/react-query-devtools'
-import {Register} from "./auth/Register";
+import Register from "./components/Register/Register";
 import {Toaster} from "react-hot-toast";
 import { Overview } from "./components/Overview";
 import SearchRegistee from "./components/SearchRegistee";
@@ -12,6 +12,12 @@ import {GetMe} from "./auth/GetMe"
 import { UsernameUpdate } from "./auth/UsernameUpdate";
 import { UploadImages } from "./components/UploadImages";
 import OtherDetails from "./components/OtherDetails";
+import Content from "./components/Content/Content";
+import MainUserContent from "./components/MainUserContent/MainUserContent";
+import Myself from "./components/Myself/Myself";
+import { ProfileUpdate } from "./components/ProfileUpdate/ProfileUpdate";
+import UpdateUsername from "./components/UpdateUsername/UpdateUsername";
+import UploadProject from "./components/UploadProject/UploadProject";
 const router = createBrowserRouter([
   {
     path:'/login',
@@ -20,7 +26,7 @@ const router = createBrowserRouter([
   },
   {
     path:'/me',
-    element: <GetMe />
+    element: <Myself />
   
   },
   {
@@ -34,7 +40,7 @@ const router = createBrowserRouter([
   },
   {
     path:'/update',
-    element : <UsernameUpdate />
+    element : <UpdateUsername />
   },
   {
     path:'/search',
@@ -45,12 +51,25 @@ const router = createBrowserRouter([
     element : <UploadImages />
   },
   {
+    path:'/update-profile',
+    element:<ProfileUpdate />
+  },
+  
+  // {
+  //   path:'/profile/:username',
+  //   element : <OtherDetails />
+  // },
+  {
+      path:'/project',
+      element:<UploadProject />
+  },
+  {
     path:'/profile/:username',
-    element : <OtherDetails />
+    element : <MainUserContent />
   },
   {
     path:'*',
-    element:<h1>Welcome</h1>
+    element:<Content />
   },
 ])
 function App() {

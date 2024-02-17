@@ -111,6 +111,31 @@ export async function createUser(post){
  
   return data;
 }
+export async function createProject(post){
+  const url = 'http://localhost:8090/api/v1/post-project';
+  const res = await fetch(url,{
+     method:"POST",
+     body: JSON.stringify(post),
+     credentials :'include',
+     headers: {
+      'Content-type':'application/json'
+    },
+
+  });
+
+  if (!res.ok) {
+    const error = new Error('An error occurred while fetching the events');
+    error.code = res.status;
+    error.info = await res.json();
+    console.log(error.info);
+    
+    throw error
+  }
+  const {data} = await res.json();
+ console.log(data);
+ 
+  return data;
+}
 
 export async function updateUsername(post){
   const url = 'http://localhost:8090/api/v1/updateUsername/';
@@ -144,6 +169,7 @@ export async function getMeData({signal}){
      signal:signal,
      credentials :'include',
      headers: {
+      'Accept': 'application/json',
       'Content-type':'application/json'
     },
   });

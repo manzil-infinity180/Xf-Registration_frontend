@@ -1,0 +1,206 @@
+.content_secton {
+    width: 100%;
+    margin-inline:auto;padding-inline:.5rem}
+
+.section_content2 {
+    margin-top: 5rem
+}
+
+@media (min-width: 475px) {
+    .content_secton {
+        max-width:475px
+    }
+}
+
+@media (min-width: 640px) {
+    .content_secton {
+        max-width:640px
+    }
+}
+
+@media (min-width: 769px) {
+    .content_secton {
+        max-width:769px
+    }
+}
+
+@media (min-width: 1025px) {
+    .content_secton {
+        max-width:1025px
+    }
+
+    .section_content2 {
+        margin-top: 10rem
+    }
+}
+
+@media (min-width: 1281px) {
+    .content_secton {
+        max-width:1281px;
+    }
+}
+.title_content{
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    gap: 1rem;
+    padding: 1rem;
+    /* margin-top: 1rem; */
+}
+.title_h1{
+    font-size: 3.5rem;
+    text-transform: uppercase;
+    line-height: 1.5;
+    letter-spacing: 0.43ch;
+    /* co */
+}
+.title_des{
+    text-align: center;
+    max-width: 60ch;
+    margin: 1rem auto;
+    color: #7f8ea3;
+    font-size: 1.12rem;
+}
+.div_content{
+    display: grid;
+    grid-template-columns: repeat(auto,minmax(500,1fr));
+    grid-gap: 1rem;
+    gap: 1rem;
+
+    
+}
+.actual_content{
+    /* height: 20rem; */
+    background-color: #0a101f;
+    padding: 0.3rem;
+    box-shadow: rgba(15,23,42,.22);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    border-radius: .375rem
+}
+.User_description{
+    font-size: 1rem;
+    color: #7f8ea3;
+    line-height: 1.5rem;
+}
+.content_repeat{
+    display: flex;
+    flex-direction: column;
+    padding: 2rem;
+    height: 20rem;
+    background-color: #0a101f;
+    justify-content: space-between;
+    border-radius: 0.375rem;
+}
+@media (min-width:640px ){
+    .div_content{
+        grid-template-columns: repeat(auto-fit,minmax(400px,1fr));
+    }
+}
+
+.user-main-content{
+    max-width: 480px !important;
+    width: 100%;
+    margin-left: auto !important;
+    margin-right: auto !important;
+    float: none;
+    border-radius: 6px !important;
+    /* padding: 40px; */
+    color: #262626;
+    background: #fff;
+    overflow: hidden;
+    box-shadow: 0px 10px 20px rgb(255 86 11 / 5%), 0px 0px 2px rgba(0,0,0,0.13);
+}
+.inside_img{
+    display: flex;
+    justify-content: center;
+    
+    align-items: center;
+    min-height: 200px;
+    padding: 0;
+    position: relative !important;
+    color: white;
+    /* background-color: #091023fc !important; */
+    /* border: pink; */
+    background-size:100%;
+    
+    /* background-image: url('https://images.rawpixel.com/image_800/czNmcy1wcml2YXRlL3Jhd3BpeGVsX2ltYWdlcy93ZWJzaXRlX2NvbnRlbnQvbHIvcm0zMDktYWV3LTAxM18xXzEuanBn.jpg'); */
+}
+.user_intro{
+    /* height: 300px; */
+    padding-bottom: 0 !important;
+    padding:35px !important ;
+    background-color: #0a101f;
+
+}
+.user_name{
+    font-size: 2.00rem;
+    text-align: center;
+    color: white;
+    line-height: 1.2;
+    overflow-y: hidden;
+    letter-spacing: 0.15ch;
+}
+.skills_user{
+    margin-top: 2.5rem;
+    color: rgba(255, 255, 255, 0.527);
+    /* max-width: 200px; */
+    max-height: 200px;
+    /* max-width: 150px; */
+    overflow-x: hidden;
+    font-size: 1rem;
+     /* overflow-wrap: normal; */
+    /* white-space: nowrap; */
+    text-overflow: clip;
+    width: 100%;
+}
+.skills{
+    display: flex;
+    /* justify-self: unset; */
+    justify-content: center;
+    flex-wrap: wrap;
+}
+.skills_name{
+    margin-top: 4px;
+    display: inline-flex;
+    position: relative;
+}
+.skills_btn{
+    font-size: 0.875rem;
+    border-radius: 0.5rem;
+    padding: 0 0.45rem;
+    display: flex;
+    margin: 0.35rem;
+    background-color: transparent;
+    border: 1px solid pink;
+    text-transform: capitalize;
+    flex-direction: row;
+    cursor: pointer;
+    /* box-shadow: #267BF0; */
+}
+.skills_btn:hover{
+    border: none;
+    color: rgba(255, 255, 255, 0.644);
+}
+.show_profile{
+    padding: 20px !important;
+    background-color: #0a101f;
+}
+.show_profile:hover{
+    background-color: white;
+    /* -webkit-transition: opacity 0.5s ease-in-out;
+    -moz-transition: opacity 0.5s ease-in-out;
+    -ms-transition: opacity 0.5s ease-in-out;
+    -o-transition: opacity 0.5s ease-in-out;
+    transition: opacity 0.5s ease-in-out; */
+}
+.show_profile_link{
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    font-size: 1.5rem;
+    color: #0a101f;
+    font-weight: 530;
+    letter-spacing: 0.175ch;
+}

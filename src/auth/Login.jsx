@@ -9,10 +9,6 @@ import { Registee } from "../components/Registee";
 import {BackButton} from "../components/BackButton";
 export function Login(){
     const navigate = useNavigate();
-    // const [post , setPost]= useState({
-    //     email:'',
-    //     password:''
-    //   });
     const [post,setPost] = useState({
         email:''
     })
@@ -109,7 +105,7 @@ export function Login(){
             <input type="password" name="password" onChange={handleInput}/>
             {content} */}
             {content}
-            <button type="submit" style={{fontSize:"1.1rem"}}>Login</button>
+            <button type="submit" style={{fontSize:"1.1rem",cursor:"pointer"}}>Login</button>
         </form>
         </>
     )

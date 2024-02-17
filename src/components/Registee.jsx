@@ -3,7 +3,7 @@ export function Registee({user}) {
     console.log(user);
     
     return (
-        <div style={{
+         <div style={{
             borderStyle:"solid",
             borderWidth:"2.5px",
             borderColor:"red",

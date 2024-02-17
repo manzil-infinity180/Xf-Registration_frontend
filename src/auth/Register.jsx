@@ -124,14 +124,16 @@ export function Register(){
             <input type="text" placeholder="Username *"  name="username" style={style} required />
             <input type="text" placeholder="College Name *" name="college"style={style} required/>
             <input type="text" placeholder="Address *" name="address" style={style} required/>
-            <input type="text" placeholder="PostalCode *" name="PostalCode" style={style} required/>
             <input type="text" placeholder="Position-Student/Current Job *" name="position" style={style} required/>
             <input type="text" placeholder="One Top Skill *" name="OneTopSkill" style={style} required/>
             <input type="text" placeholder="Skills* separated by commas like nodejs,react " style={style} name="skills"/>
+            <input type="text" placeholder="Resume Drive Link" style={style} name="resumeLink"/>
             <p style={{textAlign:"center"}}>Social Links</p>
-            <input type="text" placeholder="Github Link" style={style} name="github"/>
+            <input type="text" placeholder="Github Username" style={style} name="github"/>
             <input type="text" placeholder="LinkedIn Link" style={style} name="linkedin"/>
-            <input type="text" placeholder="Leetcode Link" style={style} name="leetcode"/>
+            <input type="text" placeholder="Leetcode Username" style={style} name="leetcode"/>
+            <input type="text" placeholder="CodeForces Username" style={style} name="codeforces"/>
+
 
             
            
