@@ -11,6 +11,7 @@ export function ContentUser({user}){
          }}>
             <img src={user.image}
             style={{borderRadius:"50%", width:"150px", height:"150px", 
+            objectFit:"cover",
             marginTop:"7rem", position:"absolute", border:"1px solid pink"}} />
          </div>
          <div className='user_intro'>

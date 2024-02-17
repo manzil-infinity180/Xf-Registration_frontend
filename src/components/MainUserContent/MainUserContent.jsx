@@ -63,7 +63,7 @@ function MainUserContent() {
         <section className='content_secton section_content2_main'>
         <div className='inside_img_main'>
              <img src={data.detail.image}
-             style={{borderRadius:"50%", width:"180px", height:"180px", 
+             style={{borderRadius:"50%", width:"180px", height:"180px", objectFit:"cover", 
               position:"absolute", border:"1px solid pink"}} />
            </div>
         <div className='title_content'>

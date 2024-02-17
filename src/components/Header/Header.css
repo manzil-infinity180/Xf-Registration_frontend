@@ -1,0 +1,23 @@
+.h1_header{
+    margin: 10px 0 0;
+    color: #7f8ea3;
+    letter-spacing: 0.2ch;
+    text-transform: capitalize;
+    font-size: 1.2rem;
+}
+.h1_header:hover{
+    text-decoration: underline;
+    opacity: 0.6;
+}
+.title_header{
+    font-size: 2.5rem;
+    margin-bottom: 1.2rem;
+    letter-spacing: 0.2ch;
+    opacity: 0.9;
+}
+.p_header{
+    max-width: 60ch;
+    color: #7f8ea3;
+    margin-bottom: 2rem;
+    letter-spacing: 0.13ch;
+}

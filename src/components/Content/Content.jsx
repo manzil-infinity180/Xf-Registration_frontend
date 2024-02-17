@@ -6,6 +6,7 @@ import './Content.css'
 import { ContentUser } from './ContentUser';
 import Calendar from 'react-github-contribution-calendar';
 import Navbar from '../Navbar/Navbar';
+import Header from '../Header/Header';
 var values = {
   '2016-06-23': 1,
   '2016-06-26': 22,
@@ -42,8 +43,16 @@ let content;
     return (
       <>
        <Navbar />
-        <section className='content_secton section_content2'>
+       <div className='banner' >
+        <div className='title_front_div'>
+        <h1 className='title_front'>Create Your Profile in 1 minute & Share through One Link</h1>
+        
+        </div>
+        <p className='p_title_front'>Wrap your all stats at one place like projects,competitive programming stats and share everywhere with anybody.</p>
 
+       </div>
+        <section className='content_secton section_content2'>
+       
         <div className='title_content'>
         <h1 className='title_h1'>Users</h1>
         </div>
@@ -58,6 +67,7 @@ let content;
 
         </div>
         </section>
+        <Header />
         </>
         
     );
