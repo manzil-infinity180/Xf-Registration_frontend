@@ -18,6 +18,7 @@ import Myself from "./components/Myself/Myself";
 import { ProfileUpdate } from "./components/ProfileUpdate/ProfileUpdate";
 import UpdateUsername from "./components/UpdateUsername/UpdateUsername";
 import UploadProject from "./components/UploadProject/UploadProject";
+import UpdateProject from "./components/UpdateProject/UpdateProject";
 const router = createBrowserRouter([
   {
     path:'/login',
@@ -66,6 +67,10 @@ const router = createBrowserRouter([
   {
     path:'/profile/:username',
     element : <MainUserContent />
+  },
+  {
+    path:'/me/edit/:id',
+    element:<UpdateProject />
   },
   {
     path:'*',

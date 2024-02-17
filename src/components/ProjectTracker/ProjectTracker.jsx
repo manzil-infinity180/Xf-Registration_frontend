@@ -1,12 +1,33 @@
 import { Link } from 'react-router-dom';
 import '../Content/Content.css'
-export function ProfileTracker({project}){
+import { FaRegEdit } from "react-icons/fa";
+import { MdDelete } from "react-icons/md";
+import { useMutation } from "@tanstack/react-query"
+import { deletePost, queryclient } from '../../utils/http';
+import toast from 'react-hot-toast';
+export function ProfileTracker({project,edit=false}){
     console.log("hey bimro");
-    
-    console.log(project)
+
+
+    const {mutate}=useMutation({
+        mutationFn :deletePost,
+        onSuccess: ()=>{
+            toast.success("Yeah just delete one");
+        },
+        mutationKey: ['getme'],
+        onSettled: ()=>{
+            queryclient.invalidateQueries(['getme',project._id]);
+        }
+        
+    });
+    // console.log(project)
+    function handleDelete(){
+        console.log(project._id);
+        mutate(project._id);
+    }
     return <>
     
-      {project && <div className='user-main-content style '>
+      {project ? <div className='user-main-content style '>
          <div className='inside_img' 
          style={{
             backgroundImage:`url(${project.projectimg})`
@@ -17,6 +38,23 @@ export function ProfileTracker({project}){
             marginTop:"7rem", position:"absolute", border:"1px solid pink"}} /> */}
          </div>
          <div className='user_intro'>
+           { edit && <>
+           <Link to={`edit/${project._id}`}>
+           <FaRegEdit style={{
+                fill:"white",
+                textAlign:"center",
+                margin: "0 5px"
+
+            }}/> </Link>
+            
+            <MdDelete style={{
+                fill:"white",
+                textAlign:"center",
+                margin: "0 5px"
+            }} onClick={handleDelete}/>
+            
+
+             </>}
          <h3 className='user_name' style={{
             fontSize:"1.75rem"
          }}>{project.title}</h3>
@@ -29,18 +67,9 @@ export function ProfileTracker({project}){
                    )}
          </div>
          <p className='skills_user'>
-         I almost have tears in my eyes because of you. 
-         Designing is CSS is something I was never able to understand properly. After watching your flex and grid videos, I just made my first design project and I am just speechless on how was I able to do that. This is hands down the best CSS channel on internet. 
-         I hope to god you grow big and achieve all your dreams.
-         I almost have tears in my eyes because of you. 
-         Designing is CSS is something I was never able to understand properly. After watching your flex and grid videos, I just made my first design project and I am just speechless on how was I able to do that. This is hands down the best CSS channel on internet. 
-         I hope to god you grow big and achieve all your dreams.
-         I almost have tears in my eyes because of you. 
-         Designing is CSS is something I was never able to understand properly. After watching your flex and grid videos, I just made my first design project and I am just speechless on how was I able to do that. This is hands down the best CSS channel on internet. 
-         I hope to god you grow big and achieve all your dreams.
-         I almost have tears in my eyes because of you. 
-         Designing is CSS is something I was never able to understand properly. After watching your flex and grid videos, I just made my first design project and I am just speechless on how was I able to do that. This is hands down the best CSS channel on internet. 
-         I hope to god you grow big and achieve all your dreams.
+         {
+            project.description
+         }
          </p>
          </div>
          <div className='show_profile'>
@@ -53,6 +82,12 @@ export function ProfileTracker({project}){
          </div>
          
          
-         </div>}
+         </div> :
+
+         <div>
+            <h1>No project Added</h1>
+         </div>
+         }
+         
     </>
  }

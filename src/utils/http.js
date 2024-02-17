@@ -187,6 +187,83 @@ export async function getMeData({signal}){
  
   return data;
 }
+
+export async function deletePost(id){
+  console.log("help me bro he is deleting my post ..." + id)
+  const url = `http://localhost:8090/api/v1/post-project/${id}`;
+  const res = await fetch(url,{
+     credentials :'include',
+     method:"DELETE",
+     headers: {
+      'Accept': 'application/json',
+      'Content-type':'application/json'
+    },
+  });
+
+  if (!res.ok) {
+    const error = new Error('An error occurred while fetching the events');
+    error.code = res.status;
+    error.info = await res.json();
+    console.log(error.info);
+    
+    throw error
+  }
+  const {data} = await res.json();
+ console.log(data);
+  return data;
+}
+export async function getPost({signal,id}){
+  const url = `http://localhost:8090/api/v1/post-project/${id}`;
+  const res = await fetch(url,{
+     credentials :'include',
+     signal:signal,
+     headers: {
+      'Accept': 'application/json',
+      'Content-type':'application/json'
+    },
+  });
+
+  if (!res.ok) {
+    const error = new Error('An error occurred while fetching the events');
+    error.code = res.status;
+    error.info = await res.json();
+    console.log(error.info);
+    
+    throw error
+  }
+  const {data} = await res.json();
+ console.log(data);
+ 
+  return data;
+}
+export async function updateProjectPost(post){
+  console.log("jdkdk");
+  // console.log({post,id});
+  const url = `http://localhost:8090/api/v1/post-project/${post.id}`;
+  const res = await fetch(url,{
+     method:"PATCH",
+     body: JSON.stringify(post),
+     credentials :'include',
+     headers: {
+      'Content-type':'application/json'
+    },
+
+  });
+
+  if (!res.ok) {
+    const error = new Error('An error occurred while fetching the events');
+    error.code = res.status;
+    error.info = await res.json();
+    console.log(error.info);
+    
+    throw error
+  }
+  const {data} = await res.json();
+ console.log(data);
+ 
+  return data;
+}
+
 export async function getOthersData({signal,username}){
   // const 
   const url = 'http://localhost:8090/api/v1/search/'+username;

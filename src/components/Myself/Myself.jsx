@@ -8,6 +8,7 @@ import { ErrorPreview } from '../../components/ErrorPreview';
 import {ContentUser} from "../Content/ContentUser";
 // import { UpdateDetails } from './UpdateDetails';
 import Navbar from "../Navbar/Navbar"
+import { ProfileTracker } from '../ProjectTracker/ProjectTracker';
 function Myself() {
     const {data,isError,error,isPending,isLoading}=useQuery({
         queryKey : ['getme'],
@@ -70,6 +71,19 @@ function Myself() {
             {/* <UpdateDetails /> */}
             </div>
         </div>
+        <section className='content_secton section_content2'>
+            <div className="div_content div_content_main">
+            {
+             data && data.project.map((el)=>
+                <ProfileTracker key={el._id} project={el} edit={true}/>
+            )
+            }
+            {/* <ProfileTracker />
+            <ProfileTracker />
+            <ProfileTracker /> */}
+           
+            </div>
+            </section>
         </>
     );
 }

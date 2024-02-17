@@ -30,6 +30,8 @@ function MainUserContent() {
         queryKey : ['getOthers',username],
         queryFn : ({signal}) => getOthersData({signal,username}),
     });
+
+    
     
     data && console.log(data.detail);
     console.log(username);
