@@ -16,13 +16,11 @@ function Register() {
     const {mutate,isLoading,isPending,data,isError,error} = useMutation({
       mutationFn: createUser,
       onSuccess: (data) => {
-          console.log(data);
           toast.success("Registration ....");
           navigate('/');
           
     },
     onError : (error)=>{
-      console.log(error.info);
       toast.error(error.info.status + "\n" + error.info.message);
     },
  onSettled: () => {
@@ -38,9 +36,6 @@ function Register() {
           //  formData.append("coordinates",JSON.stringify([77.2167, 28.6448]));
            const data = Object.fromEntries(formData);
            setPost(data);
-           console.log(data);
-           
-           console.log(post);
            mutate(data);
       }
     return (

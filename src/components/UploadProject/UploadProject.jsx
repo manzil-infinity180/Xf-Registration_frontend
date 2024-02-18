@@ -9,7 +9,6 @@ function UploadProject() {
     const {mutate,isLoading,isPending,data,isError,error} = useMutation({
         mutationFn:createProject,
         onSuccess: (data) => {
-            console.log(data);
             toast.success("Project Added Successfully ");
            
             
@@ -24,7 +23,6 @@ function UploadProject() {
         
       
         const data = Object.fromEntries(formData);
-        // console.log(data);
         mutate(data);
     }
     

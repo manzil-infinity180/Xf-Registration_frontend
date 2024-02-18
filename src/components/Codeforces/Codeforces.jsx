@@ -28,7 +28,7 @@ useEffect(function(){
         
         // console.log(data.result);
         
-        console.log(data.result);
+        // console.log(data.result);
     
         for(let item of data.result){
             // console.log(item.problem.rating);
@@ -90,7 +90,7 @@ useEffect(function(){
                     againSolved++;
                 }else{
                     countOther++;
-                console.log(item.verdict);
+                // console.log(item.verdict);
                 }
                
             }
@@ -164,7 +164,7 @@ fetchDataLineData();
 
 },[checkMap,checkMapCount,checkMapTLE,checkMapWrong,username,xMap,xMapTLE,xMapWrong]);
 
-console.log(countData,total);
+// console.log(countData,total);
 
 
 
@@ -211,7 +211,7 @@ console.log(countData,total);
     pointSize: 5,
     tooltip: { isHtml: true },
       };
-      console.log(lineData);
+    //   console.log(lineData);
 
     return (
         <>

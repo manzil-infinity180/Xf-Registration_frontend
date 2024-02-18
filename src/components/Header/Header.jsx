@@ -55,9 +55,8 @@ function Header() {
             flexDirection: "column",
 
          }}>
-           <h1 className='h1_header'>About Me</h1>
-           <h1 className='h1_header'>Contribute</h1>
-           <h1 className='h1_header'>Report Issue</h1>
+          <a href='https://github.com/manzil-infinity180' style={{textDecoration:"none"}}><h1 className='h1_header'>About Me</h1></a>
+          <a href="https://github.com/manzil-infinity180/Xf-Registration" style={{textDecoration:"none"}}><h1 className='h1_header'>Contribute</h1></a>
            <h1 className='h1_header'>Suggestion</h1>
            
          </div>

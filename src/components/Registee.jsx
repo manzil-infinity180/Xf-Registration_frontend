@@ -1,7 +1,5 @@
 import {Link} from "react-router-dom";
 export function Registee({user}) {
-    console.log(user);
-    
     return (
          <div style={{
             borderStyle:"solid",

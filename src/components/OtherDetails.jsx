@@ -8,17 +8,11 @@ import { Registee } from './Registee';
 import {BackButton} from './BackButton';
 import { SocialIcon } from 'react-social-icons'
 function OtherDetails() {
-    // const navigate = useNavigate();
-
     const {username} = useParams();
     const {data,isError,error,isPending,isLoading}=useQuery({
         queryKey : ['getOthers',username],
         queryFn : ({signal}) => getOthersData({signal,username}),
     });
-
-    data && console.log(data.detail);
-    console.log(username);
-
     let content;
     if(isLoading){
         content= <Loader />
@@ -36,26 +30,13 @@ function OtherDetails() {
  </ul>
 }
 
-// if(data){
-//     let acc = data.detail.github;
-//     console.log(acc);
-//     console.log(acc.indexOf('://'))
-//     console.log(acc.lastIndexOf('m/'));
-//     console.log(acc.slice(acc.indexOf('m/')+2)); // account-username
-//     console.log(acc.slice(acc.indexOf('://')+3,acc.indexOf('.c'))); // social-medial-platform
-//     // console.log(acc.);
-// }
 function getSocialInfo(acc){
-    // console.log(acc)
      let accountUsername = acc.slice(acc.indexOf('m/')+2);
      let socilaPlatform = acc.slice(acc.indexOf('://')+3,acc.indexOf('.c'));
-    //  console.log(accountUsername,socilaPlatform);
-    //  console.log(account.slice(account.indexOf('m/'+2)));
      return {accountUsername,socilaPlatform}; 
 }
    if(data && data.detail.github){
     const {accountUsername:name ,socilaPlatform:platform} = getSocialInfo(data.detail.github);
-    console.log(name,platform);
    }
 
     return (

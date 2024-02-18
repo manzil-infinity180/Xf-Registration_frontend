@@ -239,6 +239,7 @@ export async function getPost({signal,id}){
 export async function updateProjectPost(post){
   console.log("jdkdk");
   // console.log({post,id});
+  console.log(post);
   const url = `http://localhost:8090/api/v1/post-project/${post.id}`;
   const res = await fetch(url,{
      method:"PATCH",
@@ -256,6 +257,28 @@ export async function updateProjectPost(post){
     error.info = await res.json();
     console.log(error.info);
     
+    throw error
+  }
+  const {data} = await res.json();
+ console.log(data);
+ 
+  return data;
+}
+export async function getLogout(){
+  const url = `http://localhost:8090/api/v1/logout`;
+  const res = await fetch(url,{
+     credentials :'include',
+     headers: {
+      'Accept': 'application/json',
+      'Content-type':'application/json'
+    },
+  });
+
+  if (!res.ok) {
+    const error = new Error('An error occurred while fetching the events');
+    error.code = res.status;
+    error.info = await res.json();
+    console.log(error.info);
     throw error
   }
   const {data} = await res.json();

@@ -7,14 +7,12 @@ function UpdateUsername() {
     const {mutate,isPending,isError,error} = useMutation({
         mutationFn : updateUsername,
         onSuccess: (data) => {
-            console.log(data);
             toast.success("Updated Username....");
             
       },
       onError : (error)=>{
         toast.error(error);
         toast.error("Already present with these username")
-        console.log(error.info);
         toast.error(error.info.status + "\n" + error.info.message);
       },
       onSettled: () => {
@@ -26,11 +24,7 @@ function UpdateUsername() {
     function handleSubmit(e){
         e.preventDefault();
         const formData = new FormData(e.target);
-       
         const data = Object.fromEntries(formData);
-       
-        console.log(data);
-       
         mutate(data);
 
    }

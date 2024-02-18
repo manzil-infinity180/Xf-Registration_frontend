@@ -7,11 +7,7 @@ import Register from "./components/Register/Register";
 import {Toaster} from "react-hot-toast";
 import { Overview } from "./components/Overview";
 import SearchRegistee from "./components/SearchRegistee";
-import { AddressForm } from "./components/RegisterDemo";
-import {GetMe} from "./auth/GetMe"
-import { UsernameUpdate } from "./auth/UsernameUpdate";
 import { UploadImages } from "./components/UploadImages";
-import OtherDetails from "./components/OtherDetails";
 import Content from "./components/Content/Content";
 import MainUserContent from "./components/MainUserContent/MainUserContent";
 import Myself from "./components/Myself/Myself";
@@ -55,11 +51,6 @@ const router = createBrowserRouter([
     path:'/update-profile',
     element:<ProfileUpdate />
   },
-  
-  // {
-  //   path:'/profile/:username',
-  //   element : <OtherDetails />
-  // },
   {
       path:'/project',
       element:<UploadProject />

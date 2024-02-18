@@ -1,6 +1,5 @@
 import {useNavigate} from "react-router-dom"
 function ContinueWith({firstField,secondField,firstPath,secondPath}) {
-    console.log(firstField,firstPath,secondField,secondPath);
     const navigate = useNavigate();
     return (
         <>

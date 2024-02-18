@@ -17,14 +17,9 @@ function SearchRegistee() {
     
      function handleSubmit(e){
            e.preventDefault();
-           console.log(searchTerm);
-           
            setSearchTerm(searchElement.current.value);
-           console.log(searchTerm);
            
      }
-     data & console.log(data);
-     
      let content;
     if(isLoading){
         content= <Loader />

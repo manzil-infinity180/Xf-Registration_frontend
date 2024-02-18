@@ -71,3 +71,68 @@
     color: black;
     align-items: center;
 }
+.logout_btn{
+    background-color: transparent;
+    border: 1px solid pink;
+    border-radius: 16px;
+    width: 12%;
+    height: 5%;
+    color:#7f8ea3;
+    font-size: 100%;
+    cursor: pointer;
+}
+.logout_btn:hover{
+    border: none;
+}
+@media (max-width: 950px) {
+    .navbar_header{
+        min-width: 769px;
+    }
+    .logo_name_nav{
+        display: none;
+    }
+    .logo_navbar_f{
+        width: 85%;
+    }
+}
+@media (max-width: 640px) {
+    .navbar_header{
+        min-width: 640px;
+    }
+    .logo_name_nav{
+        display: none;
+    }
+    .logo_navbar_f{
+        width: 75%;
+    }
+    .signin_btn{
+        letter-spacing: 0;
+        /* gap: 0.1rem; */
+        font-size: 0.71rem;
+    }
+    .preview_btn{
+        font-size: 0.4rem;
+        padding: 0.1rem 0.3rem;
+    }
+    .logout_btn{
+        width: 15%;
+    }
+    
+}
+@media (max-width: 475px) {
+    .navbar_header{
+        min-width: 475px;
+    }
+    .logo_navbar_f{
+        width: 55%;
+    }
+    .social_logo_github{
+        display: none;
+    }
+    .social_logo_x{
+        display: none;
+    }
+    .social_logo_linkedin{
+        display: none;
+    }
+}

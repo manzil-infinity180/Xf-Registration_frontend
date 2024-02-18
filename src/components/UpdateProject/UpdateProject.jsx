@@ -8,7 +8,7 @@ import { useState } from "react";
 import {useParams } from 'react-router-dom';
 import InputFieldUpdate from "../InputFieldForUpdate";
 function UpdateProject() {
-
+    const [file,setFile] = useState(null);
     const {id} =useParams();
 
     const {data,isSuccess,isLoading} = useQuery({
@@ -16,8 +16,6 @@ function UpdateProject() {
          queryFn : ({signal}) => getPost({signal,id}),
          
     });
-    // console.log("data");
-    // console.log(data);
     const {mutate}=useMutation({
         mutationFn : updateProjectPost,
 
@@ -47,10 +45,8 @@ function UpdateProject() {
         e.preventDefault();
         const formData = new FormData(e.target);
         formData.append("id",id);
+        // formData.append("projectimg",file);
         const data = Object.fromEntries(formData);
-        console.log({data,id});
-       
-
         mutate(data);
         // mutate(data,id);
     }
@@ -88,13 +84,9 @@ function UpdateProject() {
                     value={data.repolink}>Repo</InputFieldUpdate>
                     <InputFieldUpdate name={"deployed"} type={"text"} placeholder={"Deployed Link of Project"}
                     value={data.deployed}>Live Link</InputFieldUpdate>
-                    </>}
-                    {/* <div className='form_label'>
-                    <label>Upload Project Image</label>
-                    </div>
-                    <input type='file' placeholder='Image Uploader' 
-                    name='dummy' onChange={(e)=> setFileproject(e.target.files[0])} >
-                    </input> */}
+                     {/* <input name="dummy" type="file" onChange={(e)=>setFile(e.target.files[0])}/> */}
+                    </>
+                }
                     <button type='submut'>Update Me</button>
                 </form>
                 

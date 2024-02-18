@@ -42,13 +42,10 @@ export function ProfileUpdate() {
           }
         
     });
-     data && console.log(data);
     if(value && data){
         setUser(data);
         setValue(false);
     }
-     console.log("hey");
-     console.log(user);
 
      if(isError){
         toast.error(error)
@@ -57,9 +54,7 @@ export function ProfileUpdate() {
     function handleSubmit(e){
         e.preventDefault();
         const formData = new FormData(e.target);
-        console.log(formData);
         const data = Object.fromEntries(formData);
-        console.log(data);
         mutate(data);
     }
     return (

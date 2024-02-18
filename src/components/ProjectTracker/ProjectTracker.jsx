@@ -6,9 +6,6 @@ import { useMutation } from "@tanstack/react-query"
 import { deletePost, queryclient } from '../../utils/http';
 import toast from 'react-hot-toast';
 export function ProfileTracker({project,edit=false}){
-    console.log("hey bimro");
-
-
     const {mutate}=useMutation({
         mutationFn :deletePost,
         onSuccess: ()=>{
@@ -20,9 +17,7 @@ export function ProfileTracker({project,edit=false}){
         }
         
     });
-    // console.log(project)
     function handleDelete(){
-        console.log(project._id);
         mutate(project._id);
     }
     return <>
@@ -30,7 +25,8 @@ export function ProfileTracker({project,edit=false}){
       {project ? <div className='user-main-content style '>
          <div className='inside_img' 
          style={{
-            backgroundImage:`url(${project.projectimg})`
+            backgroundImage:`url(${project.projectimg})`,
+            backgroundPosition:"center"
         }}>
             
             {/* <img src='/'

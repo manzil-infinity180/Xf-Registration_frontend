@@ -28,14 +28,14 @@ function Content() {
     queryKey : ['registee'],
     queryFn : getAllRegistee
 });
-console.log(data);
+// console.log(data);
 
 let content;
     if(isLoading){
         content= <Loader />
     }
     if(isError){
-        console.log(error.info)
+        // console.log(error.info)
         content = <ErrorPreview title={"Error"} message={error.message} />
     }
 

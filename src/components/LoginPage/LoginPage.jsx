@@ -12,13 +12,10 @@ function LoginPage() {
     const [post,setPost] = useState({
         email:''
     })
-    //   console.log(post)
-      
      
     const {mutate,isLoading,isPending,data,isError,error} = useMutation({
         mutationFn:fetchData,
         onSuccess: (data) => {
-            console.log(data);
             toast.success("Login Successfully " + data.loginedUser.username);
             navigate('/')
             
@@ -40,14 +37,9 @@ function LoginPage() {
         })
       }
     function handleSubmit(e){
-        // console.log(post);
         e.preventDefault();
         const formData = new FormData(e.target);
-        // console.log(formData)
         const data = Object.fromEntries(formData);
-        // onSubmit({...data});
-        // console.log(data);
-    //    mutate(post);
     mutate(data);
     
     }

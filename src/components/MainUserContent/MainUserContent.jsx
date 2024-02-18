@@ -33,10 +33,6 @@ function MainUserContent() {
 
     
     
-    data && console.log(data.detail);
-    console.log(username);
-    console.log("hello");
-    data && console.log(data.detail)
     let content;
     if(isError){
         toast.error(error);
@@ -106,21 +102,14 @@ function MainUserContent() {
         <a href={`${data.detail.resumeLink}`} style={{
             textDecoration:"none",
             color:"white"
-        }} onClick={handleClickIcon}>
+        }} onClick={handleClickIcon} target="blank">
         <FaDownload style={{
             margin:"0 5px"
         }}/> Resume </a>
      </button>
      </div>
         <p className='title_des_main'>
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
-Facilisis leo vel fringilla est ullamcorper eget nulla facilisi etiam. Nisi lacus sed viverra tellus in hac habitasse. Tempor orci eu 
-lobortis elementum nibh tellus molestie nunc. Eget mi proin sed libero enim sed. Cras semper auctor neque vitae tempus
- quam pellentesque. Vestibulum rhoncus est pellentesque elit ullamcorper dignissim cras. Non diam phasellus vestibulum lo
-rem sed. Dictum fusce ut placerat orci nulla pellentesque. Mattis nunc sed blandit libero volutpat sed cras ornare. Ut diam qua
-m nulla porttitor massa id neque aliquam. Turpis egestas maecenas pharetra convallis posuere morbi.
-Elementum integer enim neque volutpat ac tincidunt vitae semper quis. Pulvinar pellentesque habitant morbi tristique senectus. 
-Placerat vestibulum lectus mauris ultrices eros in cursus. Arcu felis bibendum ut tristique et. 
+       {data.detail.summary}
         </p>
         <div className="line_div"></div>
         <div style={{
@@ -182,9 +171,6 @@ Placerat vestibulum lectus mauris ultrices eros in cursus. Arcu felis bibendum u
                 <ProfileTracker key={el._id} project={el}/>
             )
             }
-            {/* <ProfileTracker />
-            <ProfileTracker />
-            <ProfileTracker /> */}
            
             </div>
             </section>

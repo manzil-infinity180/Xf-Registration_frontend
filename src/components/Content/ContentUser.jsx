@@ -1,8 +1,6 @@
 import { Link } from 'react-router-dom';
 import './Content.css'
 export function ContentUser({user}){
-   console.log("user");
-   console.log(user);
     return <>
       {user && 
       <div className='user-main-content style '>
@@ -26,18 +24,7 @@ export function ContentUser({user}){
                     )}
          </div>
          <p className='skills_user'>
-         I almost have tears in my eyes because of you. 
-         Designing is CSS is something I was never able to understand properly. After watching your flex and grid videos, I just made my first design project and I am just speechless on how was I able to do that. This is hands down the best CSS channel on internet. 
-         I hope to god you grow big and achieve all your dreams.
-         I almost have tears in my eyes because of you. 
-         Designing is CSS is something I was never able to understand properly. After watching your flex and grid videos, I just made my first design project and I am just speechless on how was I able to do that. This is hands down the best CSS channel on internet. 
-         I hope to god you grow big and achieve all your dreams.
-         I almost have tears in my eyes because of you. 
-         Designing is CSS is something I was never able to understand properly. After watching your flex and grid videos, I just made my first design project and I am just speechless on how was I able to do that. This is hands down the best CSS channel on internet. 
-         I hope to god you grow big and achieve all your dreams.
-         I almost have tears in my eyes because of you. 
-         Designing is CSS is something I was never able to understand properly. After watching your flex and grid videos, I just made my first design project and I am just speechless on how was I able to do that. This is hands down the best CSS channel on internet. 
-         I hope to god you grow big and achieve all your dreams.
+          {user.summary}
          </p>
          </div>
          <div className='show_profile'>
