@@ -24,4 +24,17 @@ body{
   padding: 0;
   line-height: 1.75rem;
 }
+@media (max-width: 640px){
+  .banner{
+    margin-left: 30px;
+    /* background-size: contain; */
+  }
+  .content_secton,.section_signin{
+    margin-left: 30px;
 
+  }
+
+  
+  
+ 
+}

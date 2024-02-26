@@ -15,6 +15,7 @@ import { ProfileUpdate } from "./components/ProfileUpdate/ProfileUpdate";
 import UpdateUsername from "./components/UpdateUsername/UpdateUsername";
 import UploadProject from "./components/UploadProject/UploadProject";
 import UpdateProject from "./components/UpdateProject/UpdateProject";
+import Map from "./components/Map/Map";
 const router = createBrowserRouter([
   {
     path:'/login',
@@ -66,7 +67,10 @@ const router = createBrowserRouter([
   {
     path:'*',
     element:<Content />
-  },
+  },{
+    path:"map",
+    element:<Map />
+  }
 ])
 function App() {
   return (

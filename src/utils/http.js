@@ -1,8 +1,11 @@
 import {QueryClient} from "@tanstack/react-query"
 export const queryclient = new QueryClient();
 
+// const server = 'https://xf-frontend.onrender.com';
+const server = 'http://localhost:5173';
+
 export async function fetchData(post){
-    const url = 'http://localhost:8090/api/v1/login';
+    const url = `${server}/api/v1/login`;
     const res = await fetch(url,{
        method:"POST",
        body: JSON.stringify(post),
@@ -33,12 +36,12 @@ export async function fetchData(post){
 // get all users who have done registration
 
 export async function getAllRegistee({signal,searchTerm}){
-  let url = 'http://localhost:8090/api/v1/';
+  let url = `${server}/api/v1/`;
   
   if(searchTerm) {
     console.log(url);
     
-    url += '/search?username='+searchTerm;
+    url += `/search?username=`+searchTerm;
   }
   
   const res = await fetch(url,{
@@ -69,7 +72,7 @@ export async function getAllRegistee({signal,searchTerm}){
 }
 
 export async function getSearchTerm({signal,searchTerm}){
-  let url = 'http://localhost:8090/api/v1/search?username='+searchTerm; 
+  let url = `${server}/api/v1/search?username=`+searchTerm; 
   
   // if(searchTerm) {
   //   console.log(url);
@@ -87,7 +90,7 @@ export async function getSearchTerm({signal,searchTerm}){
 }
 
 export async function createUser(post){
-  const url = 'http://localhost:8090/api/v1/register';
+  const url = `${server}/api/v1/register`;
   const res = await fetch(url,{
      method:"POST",
      body: JSON.stringify(post),
@@ -112,7 +115,7 @@ export async function createUser(post){
   return data;
 }
 export async function createProject(post){
-  const url = 'http://localhost:8090/api/v1/post-project';
+  const url = `${server}/api/v1/post-project`;
   const res = await fetch(url,{
      method:"POST",
      body: JSON.stringify(post),
@@ -138,7 +141,7 @@ export async function createProject(post){
 }
 
 export async function updateUsername(post){
-  const url = 'http://localhost:8090/api/v1/updateUsername/';
+  const url = `${server}/api/v1/updateUsername/`;
   const res = await fetch(url,{
      method:"PATCH",
      body: JSON.stringify(post),
@@ -164,7 +167,7 @@ export async function updateUsername(post){
 }
 
 export async function getMeData({signal}){
-  const url = 'http://localhost:8090/api/v1/user-detail';
+  const url = `${server}/api/v1/user-detail`;
   const res = await fetch(url,{
      signal:signal,
      credentials :'include',
@@ -190,7 +193,7 @@ export async function getMeData({signal}){
 
 export async function deletePost(id){
   console.log("help me bro he is deleting my post ..." + id)
-  const url = `http://localhost:8090/api/v1/post-project/${id}`;
+  const url = `${server}/api/v1/post-project/${id}`;
   const res = await fetch(url,{
      credentials :'include',
      method:"DELETE",
@@ -213,7 +216,7 @@ export async function deletePost(id){
   return data;
 }
 export async function getPost({signal,id}){
-  const url = `http://localhost:8090/api/v1/post-project/${id}`;
+  const url = `${server}/api/v1/post-project/${id}`;
   const res = await fetch(url,{
      credentials :'include',
      signal:signal,
@@ -240,7 +243,7 @@ export async function updateProjectPost(post){
   console.log("jdkdk");
   // console.log({post,id});
   console.log(post);
-  const url = `http://localhost:8090/api/v1/post-project/${post.id}`;
+  const url = `${server}/api/v1/post-project/${post.id}`;
   const res = await fetch(url,{
      method:"PATCH",
      body: JSON.stringify(post),
@@ -265,7 +268,7 @@ export async function updateProjectPost(post){
   return data;
 }
 export async function getLogout(){
-  const url = `http://localhost:8090/api/v1/logout`;
+  const url = `${server}/api/v1/logout`;
   const res = await fetch(url,{
      credentials :'include',
      headers: {
@@ -289,7 +292,7 @@ export async function getLogout(){
 
 export async function getOthersData({signal,username}){
   // const 
-  const url = 'http://localhost:8090/api/v1/search/'+username;
+  const url = `${server}/api/v1/search/`+username;
   const res = await fetch(url,{
      signal:signal,
      credentials :'include',
@@ -311,7 +314,7 @@ export async function getOthersData({signal,username}){
   return data;
 }
 export async function logoutUser({signal}){
-  const url = 'http://localhost:8090/api/v1/logout';
+  const url = `${server}/api/v1/logout`;
   const res = await fetch(url,{
      signal:signal,
      credentials :'include',
@@ -338,10 +341,10 @@ export async function logoutUser({signal}){
 export async function uploadUserPhoto(post){
   console.log("post");
   const category = Object.fromEntries(post);
-  let url = "http://localhost:8090/api/v1/upload-userphoto";
+  let url = `${server}/api/v1/upload-userphoto`;
 
   if(category.bgimg){
-    url = "http://localhost:8090/api/v1/upload-bgimg";
+    url =`${server}/api/v1/upload-bgimg`;
   }
   
    
@@ -368,7 +371,7 @@ return data;
 }
 
 export async function updateUserDetails(post){
-  const url = 'http://localhost:8090/api/v1/update-my-detail';
+  const url = `${server}/api/v1/update-my-detail`;
   const res = await fetch(url,{
      method:"PATCH",
      body: JSON.stringify(post),

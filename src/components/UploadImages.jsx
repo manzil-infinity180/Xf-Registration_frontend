@@ -2,8 +2,6 @@ import { useState } from "react";
 import { useMutation } from "@tanstack/react-query"
 import toast from 'react-hot-toast';
 import {queryclient, uploadUserPhoto} from "../utils/http"
-import axios from 'axios'
-import { render } from "react-dom";
 import './UploadImages.css'
 
 export function UploadImages() {

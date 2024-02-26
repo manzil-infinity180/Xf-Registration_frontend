@@ -4,9 +4,9 @@ import { Loader } from '../Loader';
 import { useQuery } from "@tanstack/react-query"
 import './Content.css'
 import { ContentUser } from './ContentUser';
-import Calendar from 'react-github-contribution-calendar';
 import Navbar from '../Navbar/Navbar';
 import Header from '../Header/Header';
+import Map from '../Map/Map';
 var values = {
   '2016-06-23': 1,
   '2016-06-26': 22,
@@ -67,6 +67,7 @@ let content;
 
         </div>
         </section>
+        
         <Header />
         </>
         

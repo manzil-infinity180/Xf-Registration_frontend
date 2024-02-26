@@ -1,4 +1,3 @@
-import { useEffect, useState } from "react";
 import { Chart } from "react-google-charts";
 let rating = new Map();
 let check = new Map();

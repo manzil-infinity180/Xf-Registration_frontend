@@ -16,7 +16,7 @@ function Myself() {
         queryKey : ['getme'],
         queryFn : getMeData
     });
-    const {isError:isErrorLog,error:errorlogout,refetch,isSuccess,isFetched}=useQuery({
+    const {isError:isErrorLog,error:errorlogout,refetch,isFetched}=useQuery({
         queryKey : ['getme'],
         queryFn : getLogout,
         enabled:false
@@ -113,6 +113,10 @@ function Myself() {
             {/* <ProfileTracker />
             <ProfileTracker />
             <ProfileTracker /> */}
+
+            {
+                errorlogout && <h1 style={{textAlign:"center"}}>Please Login again, i think some problem in fetching the data from databse 🥲</h1>
+            }
            
             </div>
             </section>
