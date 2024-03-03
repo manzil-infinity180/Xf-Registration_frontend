@@ -7,6 +7,7 @@ import { ErrorPreview } from '../../components/ErrorPreview';
 import { IoLogOut } from "react-icons/io5";
 import {ContentUser} from "../Content/ContentUser";
 import '../Navbar/Navbar.css'
+import img from './pepe.jpeg'
 // import { UpdateDetails } from './UpdateDetails';
 import Navbar from "../Navbar/Navbar"
 import { ProfileTracker } from '../ProjectTracker/ProjectTracker';
@@ -96,26 +97,23 @@ function Myself() {
                 color:"#7f8ea3"
             }}>Change Username</Link></button>
             </div>}
+            
             {
                 content
             }
-            <div>
-            {/* <UpdateDetails /> */}
-            </div>
+            {
+                isErrorLog && <img src={img} width="500px" height="500px" />
+            }
         </div>
         <section className='content_secton section_content2'>
+            {
+                errorlogout && <h1 style={{textAlign:"center"}}>Please Login again, i think some problem in fetching the data from databse 🥲</h1>
+            }
             <div className="div_content div_content_main">
             {
              data && data.project.map((el)=>
                 <ProfileTracker key={el._id} project={el} edit={true}/>
             )
-            }
-            {/* <ProfileTracker />
-            <ProfileTracker />
-            <ProfileTracker /> */}
-
-            {
-                errorlogout && <h1 style={{textAlign:"center"}}>Please Login again, i think some problem in fetching the data from databse 🥲</h1>
             }
            
             </div>

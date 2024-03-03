@@ -57,7 +57,7 @@ function Header() {
          }}>
           <a href='https://github.com/manzil-infinity180' style={{textDecoration:"none"}}><h1 className='h1_header'>About Me</h1></a>
           <a href="https://github.com/manzil-infinity180/Xf-Registration" style={{textDecoration:"none"}}><h1 className='h1_header'>Contribute</h1></a>
-           <h1 className='h1_header'>Suggestion</h1>
+           <a href="https://forms.gle/yz9WJEHkm7ahvu4o9" style={{textDecoration:"none"}}><h1 className='h1_header'>Suggestion</h1></a>
            
          </div>
           </section>
