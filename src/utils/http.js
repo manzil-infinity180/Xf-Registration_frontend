@@ -1,8 +1,8 @@
 import {QueryClient} from "@tanstack/react-query"
 export const queryclient = new QueryClient();
 
-// const server = 'https://xf-frontend.onrender.com';
 const server = 'https://xf-backend.onrender.com';
+// const server = 'http://localhost:8080'
 
 export async function fetchData(post){
     const url = `${server}/api/v1/login`;

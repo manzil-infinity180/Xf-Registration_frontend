@@ -16,12 +16,14 @@ function LoginPage() {
     const {mutate,isLoading,isPending,data,isError,error} = useMutation({
         mutationFn:fetchData,
         onSuccess: (data) => {
-            toast.success("OTP Successfully sent " + data.loginedUser.username);
+            toast.success("OTP Successfully sent");
             navigate('/verify')
             
       },
       onError : (error)=>{
         toast.error(error.info.status + "\n" + error.info.message);
+        // console.log(error);
+        toast.error("something went wrong");
       },
    onSettled: () => {
     queryclient.invalidateQueries('create')
@@ -37,7 +39,7 @@ function LoginPage() {
         e.preventDefault();
         const formData = new FormData(e.target);
         const data = Object.fromEntries(formData);
-    mutate(data);
+        mutate(data);
     
     }
     return (

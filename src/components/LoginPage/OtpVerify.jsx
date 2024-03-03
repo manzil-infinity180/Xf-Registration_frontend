@@ -16,7 +16,7 @@ function OTPverify() {
     const {mutate,isLoading,isPending,data,isError,error} = useMutation({
         mutationFn:otpVerify,
         onSuccess: (data) => {
-            toast.success("Login Successfully " + data.loginedUser.username);
+            toast.success("Login Successfully " + data.getLoginUser.username);
             navigate('/')
             
       },
