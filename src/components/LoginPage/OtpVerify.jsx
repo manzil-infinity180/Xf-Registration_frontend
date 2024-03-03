@@ -27,9 +27,6 @@ function OTPverify() {
     queryclient.invalidateQueries('create')
  }
     })
-      if(isError){
-    toast.error(error.info.status + "\n" + error.info.message);
-  }
     const handleInput = (e)=>{
         setPost({
           ...post,
