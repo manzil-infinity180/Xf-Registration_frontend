@@ -14,8 +14,10 @@
 
 @media (min-width: 640px) {
     .content_secton {
-        max-width:640px
+        max-width:640px;
+       
     }
+     
 }
 
 @media (min-width: 769px) {
@@ -242,6 +244,7 @@
         max-width: 75%;
         line-height: 3rem;
     }
+    
     
 }
 @media (max-width: 950px) {
