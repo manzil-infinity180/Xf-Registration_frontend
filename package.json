@@ -2,7 +2,7 @@
   "name": "xf-registration-frontend",
   "private": true,
   "version": "0.0.0",
-  "proxy": "http://localhost:8090/",
+  "proxy": "https://xf-backend.onrender.com",
   "type": "module",
   "scripts": {
     "dev": "vite",
