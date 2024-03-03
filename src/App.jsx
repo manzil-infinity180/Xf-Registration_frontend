@@ -16,6 +16,7 @@ import UpdateUsername from "./components/UpdateUsername/UpdateUsername";
 import UploadProject from "./components/UploadProject/UploadProject";
 import UpdateProject from "./components/UpdateProject/UpdateProject";
 import Map from "./components/Map/Map";
+import OTPverify from "./components/LoginPage/OtpVerify";
 const router = createBrowserRouter([
   {
     path:'/login',
@@ -70,6 +71,9 @@ const router = createBrowserRouter([
   },{
     path:"map",
     element:<Map />
+  },{
+    path:'/verify',
+    element:<OTPverify />
   }
 ])
 function App() {

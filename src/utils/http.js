@@ -19,18 +19,30 @@ export async function fetchData(post){
       const error = new Error('An error occurred while fetching the events');
       error.code = res.status;
       error.info = await res.json();
-      // throw error;
-     
-      // error.info = await res.json();
-      // console.log(error.code);
-      
-      // console.log(error.info)
       throw error
     }
     const {data} = await res.json();
-  //  console.log(data);
-   
     return data;
+}
+export async function otpVerify(post){
+  const url = `${server}/api/v1/verify`;
+  const res = await fetch(url,{
+     method:"POST",
+     body: JSON.stringify(post),
+     credentials :'include',
+     headers: {
+      'Content-type':'application/json'
+    },
+
+  });
+  if (!res.ok) {
+    const error = new Error('An error occurred while fetching the events');
+    error.code = res.status;
+    error.info = await res.json();
+    throw error
+  }
+  const {data} = await res.json();
+  return data;
 }
 
 // get all users who have done registration

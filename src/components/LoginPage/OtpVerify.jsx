@@ -1,23 +1,23 @@
 import './LoginPage.css'
 import { useState } from "react";
-import { fetchData } from "../../utils/http";
+import { otpVerify } from "../../utils/http";
 import { useMutation } from "@tanstack/react-query"
 import toast from 'react-hot-toast';
 import {queryclient} from "../../utils/http"
 import {useNavigate} from "react-router-dom"
 import GoBack from '../UtilComponent/GoBack';
 import ContinueWith from '../UtilComponent/ContinueWith';
-function LoginPage() {
+function OTPverify() {
     const navigate = useNavigate();
     const [post,setPost] = useState({
         email:''
     })
      
     const {mutate,isLoading,isPending,data,isError,error} = useMutation({
-        mutationFn:fetchData,
+        mutationFn:otpVerify,
         onSuccess: (data) => {
-            toast.success("OTP Successfully sent " + data.loginedUser.username);
-            navigate('/verify')
+            toast.success("Login Successfully " + data.loginedUser.username);
+            navigate('/')
             
       },
       onError : (error)=>{
@@ -73,13 +73,12 @@ function LoginPage() {
                     <div className='form_label'>
                     <label>Your Email</label>
                     </div>
-                    <input type='email' placeholder='Your email address' 
+                    <input type='number' placeholder='Enter your otp' 
                     autoComplete='off' 
-                    name='email' onChange={handleInput} >
+                    name='otp' onChange={handleInput} >
                     </input>
-                    <button type='submut'>Send OTP</button>
+                    <button type='submut'>Login</button>
                 </form>
-                <ContinueWith firstField={'Github'} firstPath={'/'} secondField={"Register Yourself"} secondPath={'/register'} />
 
         </div>
         </section>
@@ -88,4 +87,4 @@ function LoginPage() {
     );
 }
 
-export default LoginPage;
+export default OTPverify;
