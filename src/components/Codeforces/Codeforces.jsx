@@ -1,4 +1,5 @@
 import { Chart } from "react-google-charts";
+import { useState,useEffect } from "react";
 let rating = new Map();
 let check = new Map();
 let totalValue =0;

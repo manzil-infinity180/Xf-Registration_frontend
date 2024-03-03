@@ -26,12 +26,12 @@ body{
 }
 @media (max-width: 640px){
   .banner{
-    margin: 0 30px;
+    margin: 0 15px;
     padding: 50px;
     /* background-size: contain; */
   }
   .content_secton,.section_signin{
-    margin:0 30px;
+    margin:0 15px;
     padding: 50px;
 
   }

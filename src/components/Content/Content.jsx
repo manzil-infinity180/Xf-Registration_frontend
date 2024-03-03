@@ -63,7 +63,10 @@ let content;
               data 
               && 
               data.allRegistee.map((user)=> <ContentUser user={user} key={user._id} />)
+
+            
             }
+             { isLoading && <Loader />}
 
         </div>
         </section>
