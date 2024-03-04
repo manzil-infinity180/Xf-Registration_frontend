@@ -90,16 +90,17 @@ export async function getAllRegistee({signal,searchTerm}){
 
 export async function getSearchTerm({signal,searchTerm}){
   let url = `${server}/api/v1/search?username=`+searchTerm; 
-  
-  // if(searchTerm) {
-  //   console.log(url);
-    
-  //   url += '/search?username='+searchTerm;
-  // }
-  
   const res = await fetch(url,{
     signal:signal
   });
+  if (!res.ok) {
+    const error = new Error('An error occurred while fetching the events');
+    error.code = res.status;
+    error.info = await res.json();
+    console.log(error.info);
+    
+    throw error
+  }
   const {data} = await res.json();
  console.log(data);
  

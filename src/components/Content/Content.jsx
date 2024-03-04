@@ -7,6 +7,7 @@ import { ContentUser } from './ContentUser';
 import Navbar from '../Navbar/Navbar';
 import Header from '../Header/Header';
 import Map from '../Map/Map';
+import SearchRegistee from '../SearchRegistee';
 var values = {
   '2016-06-23': 1,
   '2016-06-26': 22,
@@ -51,6 +52,7 @@ let content;
         <p className='p_title_front'>Wrap your all stats at one place like projects,competitive programming stats and share everywhere with anybody.</p>
 
        </div>
+       <SearchRegistee />
         <section className='content_secton section_content2'>
        
         <div className='title_content'>
@@ -58,6 +60,7 @@ let content;
         </div>
         <p className='title_des'>Here all user who have registered on XF,See other profiles content like Resume, Project, 
             Leetcode & Github heatmap, and other information.</p>
+
         <div className='div_content'>
             {
               data 
@@ -70,6 +73,9 @@ let content;
 
         </div>
         </section>
+
+
+        
         
         <Header />
         </>

@@ -19,6 +19,8 @@ span{
     font-weight: 500;
     transition: color .5s;
     cursor: pointer;
+    background-color: transparent;
+    border: none;
 }
 .goBack_button:hover{
     color: #e3eaf3;

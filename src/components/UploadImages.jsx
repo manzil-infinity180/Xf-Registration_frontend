@@ -3,6 +3,7 @@ import { useMutation } from "@tanstack/react-query"
 import toast from 'react-hot-toast';
 import {queryclient, uploadUserPhoto} from "../utils/http"
 import './UploadImages.css'
+import GoBack from "./UtilComponent/GoBack";
 
 export function UploadImages() {
     const [file,setFile] = useState(null);
@@ -40,7 +41,9 @@ export function UploadImages() {
        
     }
     return (
-        
+        <>
+         <GoBack />
+       
         <div className="upload_div">
              <h1 style={{
                 fontSize:"2.5rem"
@@ -77,5 +80,6 @@ export function UploadImages() {
                onClick={handleBgFile}>Upload BgImage</button>
                </div>
         </div>
+        </>
     );
 }

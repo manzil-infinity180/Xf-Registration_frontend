@@ -7,7 +7,6 @@ import {useNavigate} from "react-router-dom"
 import '../Register/Register.css'
 import InputFieldUpdate from "../InputFieldForUpdate";
 import GoBack from "../UtilComponent/GoBack";
-// const style = {padding:'10px', margin:"10px"};
 export function ProfileUpdate() {
     const [user,setUser] = useState({});
     const [value,setValue] = useState(true);
@@ -39,6 +38,9 @@ export function ProfileUpdate() {
             // invalidating the query that we update the outdated data 
             toast.success("Updated Successfully");
             queryclient.invalidateQueries(['getme']);
+          },
+          onSuccess: ()=>{
+            navigate('/me');
           }
         
     });

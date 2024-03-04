@@ -106,12 +106,16 @@ function Myself() {
             }
         </div>
         <section className='content_secton section_content2'>
+              {data && <div className='project_div'>
+                Your Projects
+            </div>}
             {
                 errorlogout && <h1 style={{textAlign:"center"}}>Please Login again, i think some problem in fetching the data from databse 🥲</h1>
             }
-            <div className="div_content div_content_main">
+            <div className="div_content div_content_main_myself">
+           
             {
-             data && data.project.map((el)=>
+             data && data.project?.map((el)=>
                 <ProfileTracker key={el._id} project={el} edit={true}/>
             )
             }

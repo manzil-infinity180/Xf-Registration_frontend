@@ -19,6 +19,12 @@ body{
   overflow-x:hidden ;
   background-color: #0a101f;
 }
+.project_div{
+  color: white;
+  font-size: 2.75rem;
+  letter-spacing: 0.1cm;
+  text-align: center;
+}
 *{
   margin: 0;
   padding: 0;
