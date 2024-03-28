@@ -26,7 +26,7 @@ useEffect(function(){
         const res = await fetch(`https://codeforces.com/api/user.status?handle=${username}`);
         const data = await res.json();
         
-        // console.log(data.result);
+        console.log(data.result);
         
         // console.log(data.result);
     

@@ -2,7 +2,7 @@
   "name": "xf-registration-frontend",
   "private": true,
   "version": "0.0.0",
-  "proxy": "https://xf-backend.onrender.com",
+  "proxy": "https://codeforces.com/api/",
   "type": "module",
   "scripts": {
     "dev": "vite",

@@ -102,7 +102,7 @@ function Myself() {
                 content
             }
             {
-                isErrorLog && <img src={img} width="500px" height="500px" />
+                isErrorLog && <img src={img} width="500px" height="500px" alt='error-imag' loading='lazy'/>
             }
         </div>
         <section className='content_secton section_content2'>

@@ -60,7 +60,8 @@ function MainUserContent() {
         <div className='inside_img_main'>
              <img src={data.detail.image}
              style={{borderRadius:"50%", width:"180px", height:"180px", objectFit:"cover", 
-              position:"absolute", border:"1px solid pink"}} />
+              position:"absolute", border:"1px solid pink"}}
+              loading="lazy" />
            </div>
         <div className='title_content'>
            
@@ -126,7 +127,9 @@ function MainUserContent() {
         
             {
                  data.detail.skills.split(',').map(el=> 
-                    <img alt="Static Badge" src={`https://img.shields.io/badge/${el}-030712?style=for-the-badge&color=7f8ea3`} className="badge_skill" key={el}/>
+                    <img alt="Static Badge" src={`https://img.shields.io/badge/${el}-030712?style=for-the-badge&color=7f8ea3`} 
+                    className="badge_skill" key={el}
+                    loading="lazy"/>
                     )
             }
         
@@ -144,8 +147,11 @@ function MainUserContent() {
                 style={{
                     margin:"10px 20px",
                     width:"35rem"
-                }}/> : <ErrorPreview title={"No Username Found"}
-                message={"Please Update/Check your Github Username"} />
+                }} loading="lazy"
+                /> : <ErrorPreview title={"No Username Found"}
+                message={"Please Update/Check your Github Username"} 
+            
+                />
             }
         
         {/* <img src="https://codeforces-readme-stats.vercel.app/api/card?username=KDVinit&theme=radical" alt="codeforces" /> */}

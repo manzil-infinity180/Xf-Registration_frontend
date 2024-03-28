@@ -10,7 +10,8 @@ export function ContentUser({user}){
             <img src={user.image}
             style={{borderRadius:"50%", width:"150px", height:"150px", 
             objectFit:"cover",
-            marginTop:"7rem", position:"absolute", border:"1px solid pink"}} />
+            marginTop:"7rem", position:"absolute", border:"1px solid pink"}} 
+            loading='lazy'/>
          </div>
          <div className='user_intro'>
          <h3 className='user_name'>{user.name}</h3>
