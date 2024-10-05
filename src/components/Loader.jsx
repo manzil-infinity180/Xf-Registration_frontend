@@ -1,6 +1,6 @@
-
-
-import { InfinitySpin, Ring } from 'react-loader-spinner';
+import React from 'react';
+import { InfinitySpin } from 'react-loader-spinner';
+import CustomRingLoader from './RingLoader'; 
 
 export const Loader = () => {
     return (
@@ -11,13 +11,7 @@ export const Loader = () => {
                 color="#a9704d"
                 ariaLabel="infinity-spin-loading"
             />
-            <Ring
-                visible={true}
-                height="80"
-                width="80"
-                color="#a9704d"
-                ariaLabel="ring-loading"
-            />
+            <CustomRingLoader />
         </div>
     );
 };
