@@ -28,14 +28,16 @@ function Myself() {
     }
     if(isError){
         toast.error("Not login")
-        content = <ErrorPreview title={"Error"} message={"You are not Logined in, please login again"} />
+        navigate("/");
+        return;
     }
     if(data ){ 
         content = <ContentUser user={data} key={data._id} />
     }
     if(isErrorLog){
         toast.error("Error occurred !!!");
-        content = <ErrorPreview title={"Error"} message={error.message} />
+        navigate("/");
+        return;
     }
 
 
