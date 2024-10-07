@@ -8,7 +8,11 @@ function Header() {
             marginTop:"250px",
             backgroundColor:"#1f1e1e55"
         }}>
-             <h1 className='title_header'>Your Review/Suggestion for this Project</h1>
+             
+             
+            <h1 class="mb-4 font-extrabold text-gray-900 dark:text-white "><span class="text-transparent bg-clip-text bg-gradient-to-r to-emerald-600 from-sky-400">For XF </span>Your Feedback </h1>
+            <p class="text-lg font-normal text-gray-500 lg:text-xl dark:text-gray-400">Here at Flowbite we focus on markets where technology, innovation, and capital can unlock long-term value and drive economic growth.</p>
+ 
              <p className='p_header'>Please ping me a message what thing i can improve and what thing that you like and if you want to 
                 contribute in this project just create issue and raise a pr for that.Click on <b>suggestion</b> and fill the form
              </p>
@@ -63,10 +67,34 @@ function Header() {
             alignItems: "center" /* Ensure they are vertically aligned */
 
          }}>
+          
+
+<footer class="bg-white rounded-lg shadow dark:bg-gray-900 m-4">
+    <div class="w-full max-w-screen-xl mx-auto p-4 md:py-8">
+        <div class="sm:flex sm:items-center sm:justify-between">
+
           <a href='https://github.com/manzil-infinity180' style={{textDecoration:"none",margin: "10px"}}><h1 className='h1_header'>About Me</h1></a>
           <a href="https://github.com/manzil-infinity180/Xf-Registration" style={{textDecoration:"none", margin: "10px"}}><h1 className='h1_header'>Contribute</h1></a>
            <a href="https://forms.gle/yz9WJEHkm7ahvu4o9" style={{textDecoration:"none", margin: "10px"}}><h1 className='h1_header'>Suggestion</h1></a>
+
            
+            <ul class="flex flex-wrap items-center mb-6 text-sm font-medium text-gray-500 sm:mb-0 dark:text-gray-400">
+                <li>
+                    <a href='https://github.com/manzil-infinity180' class="hover:underline me-4 md:me-6">About Me</a>
+                </li>
+                <li>
+                    <a href="https://github.com/manzil-infinity180/Xf-Registration" class="hover:underline me-4 md:me-6">Contribute</a>
+                </li>
+                <li>
+                    <a href="https://forms.gle/yz9WJEHkm7ahvu4o9" class="hover:underline me-4 md:me-6">Suggestion</a>
+                </li>
+               
+            </ul>
+        </div>
+    </div>
+</footer>
+
+
          </div>
           </section>
          
