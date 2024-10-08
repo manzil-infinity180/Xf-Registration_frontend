@@ -1,38 +1,107 @@
-.upload_div{
-    margin: 5rem auto;
-    padding: 10px 50px;
-    text-align: center;
+.upload_div {
+  margin: 0 auto;
+  padding: 20px 50px;
+  text-align: center;
+  background-color: #1f2937;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  max-width: 700px;
 }
-.p_ele{
-    font-size: 2.5rem;
-    margin-bottom: 1.8rem;
-    color: #94a3b8;
-}
-.div_input{
-    margin: 5rem 0 ;
-    color: #94a3b8;
 
+.p_ele {
+  font-size: 1.8rem;
+  margin-bottom: 1.5rem;
+  color: #f8fafc;
+  font-weight: 500;
 }
-.button_upload{
-    padding: 5px 10px;
-    background-color: transparent;
-    border: 1px solid pink;
-    border-radius: 16px;
-    color:#94a3b8;
-    /* font-size: 1.2rem; */
-    cursor: pointer;
 
+.div_input {
+  margin: 3rem 0;
+  color: #cbd5e1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+}
 
+.button_upload {
+  padding: 10px 20px;
+  background-color: #3b82f6;
+  border: none;
+  border-radius: 10px;
+  color: #fff;
+  font-size: 1.1rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.3s ease;
 }
-.button_upload:hover{
-    border: none;
-    opacity: 0.65;
+
+.button_upload:hover {
+  background-color: #2563eb;
+  transform: scale(1.05);
 }
-.text_drag{
-    font-size: 1.2rem;
-    max-width: 60ch;
-    text-align: center;
-    /* justify-content: center; */
-    /* display: flex; */
-    margin: 2rem auto;
+
+.custom_file_input {
+  position: relative;
+  display: inline-block;
+  width: 200px;
+  height: 45px;
+  background-color: #f3f4f6;
+  border-radius: 12px;
+  font-size: 1rem;
+  cursor: pointer;
+  overflow: hidden;
+  transition: background-color 0.3s ease;
+}
+
+.custom_file_input input[type="file"] {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  opacity: 0;
+  cursor: pointer;
+}
+
+.custom_file_input::before {
+  content: "Choose File";
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+  font-size: 1rem;
+  background-color: #374151;
+  color: #f8fafc;
+  border-radius: 12px;
+  transition: background-color 0.3s ease;
+}
+
+.custom_file_input:hover::before {
+  background-color: #475569;
+}
+
+.file_label {
+  margin-top: 10px;
+  font-size: 1rem;
+  color: #60a5fa;
+  padding-bottom: 10px;
+}
+
+.text_drag {
+  font-size: 1.2rem;
+  max-width: 60ch;
+  text-align: center;
+  margin: 2rem auto;
+  color: #9ca3af;
+}
+
+h1 {
+  font-size: 2.5rem;
+  color: #f8fafc;
+  margin-bottom: 2rem;
+}
+
+p {
+  color: #9ca3af;
 }
