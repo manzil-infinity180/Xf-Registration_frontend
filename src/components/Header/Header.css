@@ -31,6 +31,27 @@
     }
     
 }
+.unordered_list {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    margin-bottom: 8rem;
+    gap: 2rem;
+    font-size: 0.875rem; 
+    font-weight: 500;
+    color: #6b7280;
+}
+
+@media (min-width: 640px) {
+    .custom-class {
+        margin-bottom: 0; 
+    }
+}
+
+body.dark .custom-class {
+    color: #9ca3af; 
+}
+
 @media (max-width: 1000px) {
     .title_header{
         font-size: 2.10rem;

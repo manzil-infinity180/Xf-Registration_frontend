@@ -10,8 +10,8 @@ function Header() {
         }}>
              
              
-            <h1 class="mb-4 font-extrabold text-gray-900 dark:text-white "><span class="text-transparent bg-clip-text bg-gradient-to-r to-emerald-600 from-sky-400">For XF </span>Your Feedback </h1>
-            <p class="text-lg font-normal text-gray-500 lg:text-xl dark:text-gray-400">Here at Flowbite we focus on markets where technology, innovation, and capital can unlock long-term value and drive economic growth.</p>
+            <h1 className="mb-4 font-extrabold text-gray-900 dark:text-white"><span className="text-transparent bg-clip-text bg-gradient-to-r to-emerald-600 from-sky-400">For XF </span>Your Feedback </h1>
+            <p className="text-lg font-normal text-gray-500 lg:text-xl dark:text-gray-400">Here at Flowbite we focus on markets where technology, innovation, and capital can unlock long-term value and drive economic growth.</p>
  
              <p className='p_header'>Please ping me a message what thing i can improve and what thing that you like and if you want to 
                 contribute in this project just create issue and raise a pr for that.Click on <b>suggestion</b> and fill the form
@@ -62,19 +62,19 @@ function Header() {
           
            
 
-<footer class="bg-white rounded-lg shadow dark:bg-gray-900 m-4">
-    <div class="w-full max-w-screen-xl mx-auto p-4 md:py-8">
-        <div class="sm:flex sm:items-center sm:justify-between">
+<footer className="bg-white rounded-lg shadow dark:bg-gray-900 m-4">
+    <div className="w-full max-w-screen-xl mx-auto p-4 md:py-8">
+        <div className="sm:flex sm:items-center sm:justify-between">
            
-            <ul class="flex flex-wrap items-center mb-6 text-sm font-medium text-gray-500 sm:mb-0 dark:text-gray-400">
+            <ul className="unordered_list">
                 <li>
-                    <a href='https://github.com/manzil-infinity180' class="hover:underline me-4 md:me-6">About Me</a>
+                    <a href='https://github.com/manzil-infinity180' className="hover:underline me-4 md:me-6">About Me</a>
                 </li>
                 <li>
-                    <a href="https://github.com/manzil-infinity180/Xf-Registration" class="hover:underline me-4 md:me-6">Contribute</a>
+                    <a href="https://github.com/manzil-infinity180/Xf-Registration" className="hover:underline me-4 md:me-6">Contribute</a>
                 </li>
                 <li>
-                    <a href="https://forms.gle/yz9WJEHkm7ahvu4o9" class="hover:underline me-4 md:me-6">Suggestion</a>
+                    <a href="https://forms.gle/yz9WJEHkm7ahvu4o9" className="hover:underline me-4 md:me-6">Suggestion</a>
                 </li>
                
             </ul>
