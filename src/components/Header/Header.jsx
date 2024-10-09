@@ -69,7 +69,7 @@ function Header() {
            
             <ul class="flex flex-wrap items-center mb-6 text-sm font-medium text-gray-500 sm:mb-0 dark:text-gray-400">
                 <li>
-                    <a href='https://github.com/manzil-infinity180' class="hover:underline me-4 md:me-6">About Me</a>
+                    <a href='rahulxf.tech' class="hover:underline me-4 md:me-6">About Me</a>
                 </li>
                 <li>
                     <a href="https://github.com/manzil-infinity180/Xf-Registration" class="hover:underline me-4 md:me-6">Contribute</a>
