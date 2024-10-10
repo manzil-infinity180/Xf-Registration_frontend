@@ -70,8 +70,8 @@ function Header() {
          }}>
 
           <a href='rahulxf.tech' style={{textDecoration:"none",margin: "8px"}}><h1 className='h1_header'>About Me</h1></a>
-          <a href="https://github.com/manzil-infinity180/Xf-Registration" style={{textDecoration:"none", margin: "10px"}}><h1 className='h1_header'>Contribute</h1></a>
-           <a href="https://forms.gle/yz9WJEHkm7ahvu4o9" style={{textDecoration:"none", margin: "10px"}}><h1 className='h1_header'>Suggestion</h1></a>
+          <a href="https://github.com/manzil-infinity180/Xf-Registration" style={{textDecoration:"none", margin: "8px"}}><h1 className='h1_header'>Contribute</h1></a>
+           <a href="https://forms.gle/yz9WJEHkm7ahvu4o9" style={{textDecoration:"none", margin: "8px"}}><h1 className='h1_header'>Suggestion</h1></a>
 
           
 
