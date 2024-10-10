@@ -8,7 +8,11 @@ function Header() {
             marginTop:"250px",
             backgroundColor:"#1f1e1e55"
         }}>
-             <h1 className='title_header'>Your Review/Suggestion for this Project</h1>
+             
+             
+            <h1 className="mb-4 font-extrabold text-gray-900 dark:text-white"><span className="text-transparent bg-clip-text bg-gradient-to-r to-emerald-600 from-sky-400">For XF </span>Your Feedback </h1>
+            <p className="text-lg font-normal text-gray-500 lg:text-xl dark:text-gray-400">Here at Flowbite we focus on markets where technology, innovation, and capital can unlock long-term value and drive economic growth.</p>
+ 
              <p className='p_header'>Please ping me a message what thing i can improve and what thing that you like and if you want to 
                 contribute in this project just create issue and raise a pr for that.Click on <b>suggestion</b> and fill the form
              </p>
