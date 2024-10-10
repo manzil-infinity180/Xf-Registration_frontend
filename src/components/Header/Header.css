@@ -65,3 +65,10 @@ body.dark .custom-class {
     }
     
 }
+
+@media (max-width:420px) {
+    .h1_header{
+        font-size: 17px;
+    }
+    
+}
