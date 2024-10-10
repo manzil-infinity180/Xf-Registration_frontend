@@ -3,12 +3,16 @@ import './Header.css'
 function Header() {
     return (
         <>
-       
+        <div className='card_container'>
         <section className='section_container_login section_signin' style={{
             marginTop:"250px",
             backgroundColor:"#1f1e1e55"
         }}>
-             <h1 className='title_header'>Your Review/Suggestion for this Project</h1>
+             
+             
+            <h1 class="mb-4 font-extrabold text-gray-900 dark:text-white "><span class="text-transparent bg-clip-text bg-gradient-to-r to-emerald-600 from-sky-400">For XF </span>Your Feedback </h1>
+            <p class="text-lg font-normal text-gray-500 lg:text-xl dark:text-gray-400">Here at Flowbite we focus on markets where technology, innovation, and capital can unlock long-term value and drive economic growth.</p>
+ 
              <p className='p_header'>Please ping me a message what thing i can improve and what thing that you like and if you want to 
                 contribute in this project just create issue and raise a pr for that.Click on <b>suggestion</b> and fill the form
              </p>
@@ -55,6 +59,7 @@ function Header() {
                 <svg xmlns="http://www.w3.org/2000/svg" style={{ margin:"0 2rem",fontSize:"1.5rem"}} viewBox="0 0 496 512" width="1.2em" height="1.2em" fill='#ffff'><path fill="#ffffff" d="M389.2 48h70.6L305.6 224.2 487 464H345L233.7 318.6 106.5 464H35.8L200.7 275.5 26.8 48H172.4L272.9 180.9 389.2 48zM364.4 421.8h39.1L151.1 88h-42L364.4 421.8z"/></svg>
                 </a>
          </div>
+        
          <div style={{
             margin: "0 auto",
             display: "flex",
@@ -63,13 +68,19 @@ function Header() {
             alignItems: "center" /* Ensure they are vertically aligned */
 
          }}>
-          <a href='https://github.com/manzil-infinity180' style={{textDecoration:"none",margin: "10px"}}><h1 className='h1_header'>About Me</h1></a>
-          <a href="https://github.com/manzil-infinity180/Xf-Registration" style={{textDecoration:"none", margin: "10px"}}><h1 className='h1_header'>Contribute</h1></a>
-           <a href="https://forms.gle/yz9WJEHkm7ahvu4o9" style={{textDecoration:"none", margin: "10px"}}><h1 className='h1_header'>Suggestion</h1></a>
+
+          <a href='rahulxf.tech' style={{textDecoration:"none",margin: "8px"}}><h1 className='h1_header'>About Me</h1></a>
+          <a href="https://github.com/manzil-infinity180/Xf-Registration" style={{textDecoration:"none", margin: "8px"}}><h1 className='h1_header'>Contribute</h1></a>
+           <a href="https://forms.gle/yz9WJEHkm7ahvu4o9" style={{textDecoration:"none", margin: "8px"}}><h1 className='h1_header'>Suggestion</h1></a>
+
+          
+
            
+
+
          </div>
           </section>
-         
+         </div>
          </>
     );
 }
