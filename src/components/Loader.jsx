@@ -1,8 +1,9 @@
 import { InfinitySpin } from 'react-loader-spinner'
+import { HashLoader } from "react-spinners";
 export const Loader = () => {
     return (
         <div style={{ display:"flex" ,textAlign:"center",justifyContent:"center" }}>
-            <InfinitySpin
+            <HashLoader 
   visible={true}
   
   width="200"
